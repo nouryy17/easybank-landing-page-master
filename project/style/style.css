@@ -1,0 +1,403 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.continer {
+  padding: 0 60px;
+}
+@media (max-width: 1200px) {
+  .continer {
+    padding: 0 30px;
+  }
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  nav ul {
+    display: none;
+  }
+  nav ul.activ {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 250px;
+    width: 350px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px 2px #333;
+    z-index: 3;
+  }
+}
+nav ul li {
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+@media (max-width: 1200px) {
+  nav ul li {
+    width: 100%;
+    height: 50px;
+    border: none;
+  }
+}
+nav ul li:hover {
+  border-bottom: 2px solid hsl(136, 65%, 51%);
+}
+@media (max-width: 1200px) {
+  nav ul li:hover {
+    border: none;
+  }
+}
+nav ul li:hover a {
+  color: hsl(233, 26%, 24%);
+}
+nav ul li a {
+  color: hsl(233, 8%, 62%);
+}
+nav button {
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%) 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 9px 23px;
+  border: none;
+  cursor: pointer;
+}
+nav button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+@media (max-width: 1200px) {
+  nav button {
+    display: none;
+  }
+}
+nav .svg {
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  nav .svg {
+    display: none;
+  }
+}
+nav .svg .activ {
+  display: none;
+}
+
+.mockups {
+  display: flex;
+  margin-left: 60px;
+  height: 510px;
+}
+@media (max-width: 1200px) {
+  .mockups {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 0;
+    height: fit-content;
+  }
+}
+.mockups .img {
+  flex-basis: 100%;
+  background-image: url(../images/bg-intro-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  background-position-y: -168px;
+}
+@media (max-width: 1200px) {
+  .mockups .img {
+    background-image: url(../images/bg-intro-mobile.svg);
+    background-position: center;
+  }
+}
+.mockups .img img {
+  width: 550px;
+  position: absolute;
+}
+@media (max-width: 1200px) {
+  .mockups .img img {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+.mockups .text {
+  font-family: [Public Sans];
+}
+@media (max-width: 1200px) {
+  .mockups .text {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.mockups .text h1 {
+  color: hsl(233, 26%, 24%);
+  font-size: 57px;
+  font-weight: 400;
+}
+@media (max-width: 1200px) {
+  .mockups .text h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+.mockups .text p {
+  color: hsl(233, 8%, 62%);
+  max-width: 390px;
+  line-height: 30px;
+  margin-bottom: 29px;
+}
+@media (max-width: 1200px) {
+  .mockups .text p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.mockups .text button {
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%) 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 9px 23px;
+  border: none;
+  cursor: pointer;
+}
+.mockups .text button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+@media (max-width: 1200px) {
+  .mockups .text button {
+    margin: auto;
+  }
+}
+
+.choose_Easybank {
+  background-color: hsl(0, 0%, 98%);
+  padding: 60px;
+}
+@media (max-width: 1200px) {
+  .choose_Easybank {
+    margin-top: 50Px;
+    text-align: center;
+  }
+}
+.choose_Easybank h1 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+.choose_Easybank p {
+  color: hsl(233, 8%, 62%);
+  line-height: 30px;
+  max-width: 600px;
+}
+.choose_Easybank .boxs {
+  display: flex;
+  margin-top: 40px;
+  gap: 15px;
+}
+@media (max-width: 1200px) {
+  .choose_Easybank .boxs {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+.choose_Easybank .boxs .box h3 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+  margin: 20Px 0;
+}
+.choose_Easybank .boxs .box p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.Latest_Articles {
+  padding: 60px;
+  background-color: hsl(220, 16%, 96%);
+}
+@media (max-width: 1200px) {
+  .Latest_Articles {
+    margin-top: 50Px;
+    text-align: center;
+  }
+}
+.Latest_Articles h1 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+.Latest_Articles .boxs {
+  display: flex;
+  margin-top: 40px;
+  gap: 15px;
+}
+@media (max-width: 1200px) {
+  .Latest_Articles .boxs {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+.Latest_Articles .boxs .box {
+  background-color: hsl(0, 0%, 100%);
+}
+.Latest_Articles .boxs .box img {
+  width: 100%;
+  height: 50%;
+}
+.Latest_Articles .boxs .box .text {
+  padding: 20px;
+}
+.Latest_Articles .boxs .box .text h4 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+  margin: 20Px 0;
+  cursor: pointer;
+}
+.Latest_Articles .boxs .box .text h4:hover {
+  color: hsl(136, 65%, 51%);
+}
+.Latest_Articles .boxs .box .text p {
+  font-size: 14px;
+  color: hsl(233, 8%, 62%);
+}
+.Latest_Articles .boxs .box .text p:first-of-type {
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  background-color: hsl(233, 26%, 24%);
+  padding: 60px;
+}
+@media (max-width: 1200px) {
+  .footer {
+    padding: 30Px;
+    display: block;
+    text-align: center;
+  }
+}
+.footer .one {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .footer .one {
+    justify-content: center;
+  }
+}
+.footer .one div {
+  margin: 0;
+}
+.footer .one div svg {
+  cursor: pointer;
+  margin-right: 5px;
+}
+@media (max-width: 1200px) {
+  .footer .one div svg {
+    margin: 25px auto;
+  }
+}
+.footer .one div svg:hover path {
+  fill: hsl(136, 65%, 51%);
+}
+.footer .tow {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 60%;
+}
+@media (max-width: 1200px) {
+  .footer .tow {
+    display: block;
+  }
+}
+.footer .tow ul li {
+  height: 25px;
+}
+.footer .tow ul li a {
+  color: hsl(0, 0%, 100%);
+}
+.footer .tow ul li a:hover {
+  color: hsl(136, 65%, 51%);
+}
+.footer .three {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 20%;
+}
+@media (max-width: 1200px) {
+  .footer .three {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.footer .three button {
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%) 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 9px 23px;
+  border: none;
+  cursor: pointer;
+}
+.footer .three button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+@media (min-width: 1200px) {
+  .footer .three button {
+    width: fit-content;
+    margin: auto;
+  }
+}
+.footer .three p {
+  font-size: 12px;
+  color: hsl(233, 8%, 62%);
+  margin-top: 20px;
+}
+
+footer {
+  height: 60px;
+  color: hsl(233, 26%, 24%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
