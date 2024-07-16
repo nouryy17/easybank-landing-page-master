@@ -3,11 +3,13 @@
     box-sizing: border-box
     margin: 0
     padding: 0
-
+body
+    font-family: "Public Sans", sans-serif
 .continer
     padding: 0 60px
-    @include for-phone-only
-       padding: 0 30px
+    @include for-size(max-mobile)
+      padding: 0 30px
+   
 
     
 nav
@@ -21,7 +23,7 @@ nav
         display: flex
         justify-content: center
         height: 100%
-        @include for-phone-only
+        @include for-size(max-mobile)
           display: none
           &.activ
             display: flex
@@ -33,7 +35,7 @@ nav
             left: 50%
             transform: translateX(-50%)
             height: 250px
-            width: 350px
+            width:90%
             border-radius: 4px
             box-shadow: 3px 3px 12px 2px  #333
             z-index: 3
@@ -45,17 +47,16 @@ nav
             justify-content: center
             transition: 0.5s all
             border-bottom: 2px solid $White
-            @include for-phone-only
+            @include for-size(tablet-landscape-up)
+               margin: 0 10px
+            @include for-size(max-mobile)
              width: 100%
              height: 50px
              border: none
-
-
             &:hover
                 border-bottom: 2px solid $Lime-Green
-                @include for-phone-only
+                @include for-size(max-mobile)
                  border: none
-
             &:hover a
                 color: $Dark-Blue
             a
@@ -64,26 +65,25 @@ nav
        @include  button($Lime-Green,$Bright-Cyan)
        &:hover
         @include  button-hover
-       @include for-phone-only
-         display: none
+       @include for-size(max-mobile)
+        display: none
     .svg
         cursor: pointer
-        @include for-desktop-up
-         display: none
+        display: none
+        @include for-size(max-mobile)
+          display: block
         .activ
-            display: none
+         display: none
 .mockups
    display: flex
    margin-left: 60px
    height: 510px
-   @include for-phone-only
+   @include for-size(max-mobile)
       display: flex
       flex-direction: column-reverse
       justify-content: center
       margin: 0
       height: fit-content
-      
-
    .img
     flex-basis: 100%
     background-image: url(../images/bg-intro-desktop.svg)
@@ -92,20 +92,20 @@ nav
     display: flex
     justify-content: flex-end
     background-position-y: -168px
-    @include for-phone-only
+    @include for-size(max-mobile)
        background-image: url(../images/bg-intro-mobile.svg)
        background-position: center
     img
         width: 550px
         position: absolute
-        @include for-phone-only
+        @include for-size(max-mobile)
+        
            position: relative
            width: 350px
            margin: 0 auto
 
    .text
-        font-family: [Public Sans]
-        @include for-phone-only
+        @include for-size(max-mobile)
           margin-top:10px 
           display: flex
           flex-direction: column
@@ -115,17 +115,17 @@ nav
           color: $Dark-Blue
           font-size: 57px
           font-weight: 400
-          @include for-phone-only
+          @include for-size(max-mobile)
              font-size: 30px
+             margin: 0 20px
              text-align: center
-             margin: auto
-             margin-bottom: 10px
         p
             color: $Grayish-Blue
             max-width: 390px
             line-height: 30px
             margin-bottom: 29px
-            @include for-phone-only
+            @include for-size(max-mobile)
+            
                text-align: center
                margin: 0 auto
 
@@ -134,13 +134,15 @@ nav
                  @include  button($Lime-Green,$Bright-Cyan)
                  &:hover
                   @include  button-hover
-                 @include for-phone-only
+                 @include for-size(max-mobile)
+                 
                    margin: auto
                  
 .choose_Easybank
     background-color: $Very-Light-Gray
     padding: 60px 
-    @include for-phone-only
+    @include for-size(max-mobile)
+    
        margin-top: 50Px
        text-align: center
     h1
@@ -154,10 +156,16 @@ nav
         display: flex
         margin-top: 40px
         gap: 15px
-        @include for-phone-only
+        @include for-size(max-mobile)
+        
            flex-wrap: wrap
            text-align: center
         .box
+            @include for-size(tablet-landscape-up)
+                     align-items: center
+                     display: flex
+                     flex-direction: column
+                     text-align: center
             h3
                 color: $Dark-Blue
                 font-weight: 400
@@ -172,7 +180,8 @@ nav
 .Latest_Articles
     padding: 60px
     background-color: $Light-Grayish-Blue
-    @include for-phone-only
+    @include for-size(max-mobile)
+    
        margin-top: 50Px
        text-align: center
     h1
@@ -182,14 +191,16 @@ nav
         display: flex
         margin-top: 40px
         gap: 15px
-        @include for-phone-only
+        @include for-size(max-mobile)
+        
            flex-wrap: wrap
            text-align: center
         .box
             background-color: $White
+            height: fit-content
             img
                 width: 100%
-                height: 50%
+                height: 160px
             .text
                 padding: 20px
                 h4
@@ -211,7 +222,7 @@ nav
     display: flex
     background-color: $Dark-Blue
     padding: 60px
-    @include for-phone-only
+    @include for-size(max-mobile)
        padding: 30Px
        display: block
        text-align: center
@@ -221,15 +232,16 @@ nav
         display: flex
         flex-direction: column
         justify-content: space-between
-        @include for-phone-only
+        // margin: 0 auto
+        @include for-size(max-mobile)
             justify-content: center
 
         div
             margin: 0
             svg
                 cursor: pointer
-                margin-right: 5px
-                @include for-phone-only
+                margin: auto
+                @include for-size(max-mobile)
                   margin: 25px auto
                 &:hover
                     path
@@ -239,7 +251,7 @@ nav
         display: flex
         justify-content: space-evenly
         flex-basis: 60%
-        @include for-phone-only
+        @include for-size(max-mobile)
           display: block
 
         ul
@@ -256,14 +268,14 @@ nav
         justify-content: space-between
         align-items: space-between
         width: 20%
-        @include for-phone-only
+        @include for-size(max-mobile)
            width: 100%
            margin-top: 20px
         button
              @include  button($Lime-Green,$Bright-Cyan)
              &:hover
               @include  button-hover
-             @include for-desktop-up
+             @include  for-size(desktop-up)
                  width: fit-content
                  margin: auto
              
@@ -278,6 +290,9 @@ footer
     display: flex
     align-items: center
     justify-content: center
+    @include  for-size(max-mobile)
+      font-size: 11px 
+
 
 
 
