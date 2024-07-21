@@ -336,6 +336,11 @@ nav .svg .activ {
     justify-content: center;
   }
 }
+@media (max-width: 767px) {
+  .footer .one svg {
+    margin: auto;
+  }
+}
 .footer .one div {
   margin: 0;
 }
